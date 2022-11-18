@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="formValidation.css">
+</head>
+<body>
+    <form name="validation" method="post">
+        <h1 class="heading">Validation Form</h1>
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" name="name" placeholder="Enter Your Name" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email id : </label>
+            <input type="email" name="email" placeholder="Enter Email id" id="email" required>
+        </div>
+        <div>
+            <label for="phone">Contact No : </label>
+            <input type="number" name="phone" placeholder="Enter Contact No" id="phone" required>
+        </div>
+        <div>
+            <span>Gender : </span><br>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="Gender">&nbsp;&nbsp;
+            <label for="female">female</label>
+            <input type="radio" id="female" name="gender" value="Gender">&nbsp;&nbsp;
+            <label for="others">Other</label>
+            <input type="radio" id="other" name="gender" value="Gender">
+        </div>
+        <div>
+            <label for="nationality">Nationality : </label>
+            <select name="nation" id="nation">
+                <option value="select">Select</option>
+                <option value="indian">Indian</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" name="password" required value="" placeholder="Create Password" id="password"><br>
+            <label for="cPassword">Confirm Password : </label>
+            <input type="password" name="C-Password" value="" id="cpassword" placeholder="Confirm Password" required>
+        </div>
+        <div>
+            <button type="button" onclick="validate()">Submit</button><br>
+            <input type="reset" id="reset" name="reset" value="Reset">
+            <!-- <button type="reset" value="reset" form="signupForm">Reset</button> -->
+        </div>
+    </form>
+
+    <script src="formValidation.js"></script>
+</body>
+</html>
